@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;CreateCourseReviewDemo.java&apos; to &apos;com.greatdigitallab.hibernate.main.CreateCourseReviewDemo.java&apos;&#x0D;&#x0A;- Original project: &apos;Hibernate_ManyToMany&apos;&#x0D;&#x0A;- Destination element: &apos;com.greatdigitallab.hibernate.main.CreateCourseReviewDemo.java&apos;&#x0D;&#x0A;- Original element: &apos;com.greatdigitallab.hibernate.main.CreateCourseReviewDemo.java&apos;" description="Copy compilation unit" destination="/src&lt;com.greatdigitallab.hibernate.main{CreateCourseReviewDemo.java" element1="/src&lt;com.greatdigitallab.hibernate.main{CreateCourseReviewDemo.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1560435562292" units="1" version="1.0"/>
+</session>

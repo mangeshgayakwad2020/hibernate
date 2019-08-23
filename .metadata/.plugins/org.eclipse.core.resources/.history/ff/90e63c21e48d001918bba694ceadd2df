@@ -1,0 +1,5 @@
+package com.greatdigitallab.hibernate.entity;
+
+public class Student {
+
+}

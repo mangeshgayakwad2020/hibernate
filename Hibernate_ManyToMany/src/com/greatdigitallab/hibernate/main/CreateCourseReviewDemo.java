@@ -1,0 +1,53 @@
+package com.greatdigitallab.hibernate.main;
+
+import org.hibernate.Session;
+import org.hibernate.SessionFactory;
+import org.hibernate.cfg.Configuration;
+
+import com.greatdigitallab.hibernate.entity.Course;
+import com.greatdigitallab.hibernate.entity.Review;
+import com.greatdigitallab.hibernate.entity.Trainer;
+import com.greatdigitallab.hibernate.entity.TrainerDetail;
+
+public class CreateCourseReviewDemo {
+
+	public static void main(String[] args) {
+
+		// Create session factory
+		SessionFactory sessionFactory = new Configuration()
+				.configure("hibernate.cfg.xml")
+				.addAnnotatedClass(Trainer.class)
+				.addAnnotatedClass(TrainerDetail.class)
+				.addAnnotatedClass(Course.class)
+				.addAnnotatedClass(Review.class)
+				.buildSessionFactory();
+
+		// Create session
+		Session session = sessionFactory.getCurrentSession();
+		
+		try {
+			
+			// Start the transaction
+			session.beginTransaction();
+			
+			// Create a Course object
+			Course course = new Course("Self Defense Training for Girls");
+						
+			// Add some Reviews to the course
+			course.addReview(new Review("Great Course for Self Defence..!!"));
+			course.addReview(new Review("Everyone should learn from this course."));			
+			course.addReview(new Review("This course is not good, this is for girls only!"));
+			
+			// Save the course and associated reviews
+			session.save(course);
+			
+			// commit the transaction
+			session.getTransaction().commit();
+			
+			System.out.println("Saving Done..!!");
+		}finally {
+			// Close the session
+			session.close();
+		}
+	}
+}
